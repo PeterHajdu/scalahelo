@@ -1,12 +1,11 @@
-import org.scalatest.FunSpec
-import org.scalatest.matchers.ShouldMatchers
-
 import Helo._
+import org.scalatest.freespec.AnyFreeSpecLike
+import org.scalatest.matchers.should.Matchers
 
-class AlbumTest extends FunSpec with ShouldMatchers  {
-   describe("something") {
-       it ("returns appletree") {
-         Helo.appl should equal ("appletree")
-       }
-   }
+class AlbumTest extends AnyFreeSpecLike with Matchers {
+  "something" - {
+    "returns appletree" in {
+      Helo.appl should equal ("appletree")
+    }
+  }
 }
